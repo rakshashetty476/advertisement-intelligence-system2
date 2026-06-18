@@ -5,9 +5,14 @@ import cv2
 import pandas as pd
 import joblib
 import pytesseract
+import os
 
 # Tesseract Path
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+if os.name == "nt":
+    pytesseract.pytesseract.tesseract_cmd = (
+        r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+    )
+
 
 # Load Model
 model = joblib.load("random_forest_model.pkl")
