@@ -1,2 +1,8 @@
 streamlit
+numpy
+pandas
+opencv-python-headless
 pillow
+scikit-learn
+joblib
+pytesseract
